@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gráficos</title>
-    <link rel="stylesheet" href="styleGraf.css">
+    <link rel="stylesheet" href="./css/styleGraf.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="header">
@@ -23,22 +24,23 @@
 
     <div class="graficos">
 <div class="graph">
-    <canvas id="chartLine" style="width: 100%; height: 100%;"></canvas>
+    <canvas id="chartLine" style="width: 900%; height: 100%;"></canvas>
 </div>
 <div class="graph">
-    <canvas id="chartBar" style="width: 100%; height: 100%;"></canvas>
+    <canvas id="chartBar" style="width: 90%; height: 100%;"></canvas>
 </div>
 <div class="graph">
-    <canvas id="chartPie" style="width: 100%; height: 100%;"></canvas>
+    <canvas id="chartPie" style="width: 90%; height: 100%;"></canvas>
 </div>
 </div>
 </div>
 </body>
 </html>
 <script>
+  
     var ctxBar = document.getElementById("chartLine").getContext("2d");
   var rotulosBar = ["Abaixo do Xerife", "Acima do Xerife"];
-  var dataBar = [1711.00, 1539.00, 2585.00, 2499.00, 2498.00];
+  var dataBar = [1711.00, 1539.00];
   var configBar = {
     type: 'line',
     data: {
@@ -48,18 +50,18 @@
           label: 'MÉDIA SALÁRIO POR REGIÃO',
           data: dataBar,
           backgroundColor: [
-            '#FAFF10',
-            '#FFFF00',
+            '#0A0010',
+            '#000000',
             '#FFAF1F',
-            '#FFFADF',
+            '#000AD0',
             '#9FFFB9',
-            '#9AF100',
-            '#FFCFF0',
-            '#CFFFA2',
+            '#0A0100',
+            '#0FC000',
+            '#C0F0A2',
           ],
           borderColor: [
-            '#FFF0F0',
-            '#FAFD10',
+            '#F000F0',
+            '#0AFD10',
             '#F616BF',
             '#08C11F',
             '#41C0A9',
@@ -83,7 +85,7 @@
 
 
 
-
+  var ax_chartBar = new Chart(ctxBar, configBar);
 
 
 
@@ -91,7 +93,7 @@
   var rotulosBar = ["Norte", "Nordeste", "Sudeste", "Sul", "Centro-Oeste"];
   var dataBar = [1711.00, 1539.00, 2585.00, 2499.00, 2498.00];
   var configBar = {
-    type: 'line',
+    type: 'bar',
     data: {
       labels: rotulosBar,
       datasets: [
@@ -134,13 +136,13 @@
 
 
 
-
+  var ax_chartBar = new Chart(ctxBar, configBar);
 
     var ctxBar = document.getElementById("chartPie").getContext("2d");
   var rotulosBar = ["Norte", "Nordeste", "Sudeste", "Sul", "Centro-Oeste"];
   var dataBar = [1711.00, 1539.00, 2585.00, 2499.00, 2498.00];
   var configBar = {
-    type: 'line',
+    type: 'pie',
     data: {
       labels: rotulosBar,
       datasets: [
@@ -181,4 +183,5 @@
     }
   }
 
+  var ax_chartBar = new Chart(ctxBar, configBar);
     </script>
