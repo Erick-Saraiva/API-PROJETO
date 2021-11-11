@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos</title>
+    <link rel="stylesheet" href="styleGraf.css">
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <a href="#" class="logo"></a>
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="graficos.html" class="ativo">Gráficos</a></li>
+            <li> <a href="login.html">Login</a></li>
+            <li> <a href="cadastro.html">Cadastro</a></li>
+            <li> <a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+        </div>
+    
+
+    <div class="graficos">
+<div class="graph">
+    <canvas id="chartLine" style="width: 100%; height: 100%;"></canvas>
+</div>
+<div class="graph">
+    <canvas id="chartBar" style="width: 100%; height: 100%;"></canvas>
+</div>
+<div class="graph">
+    <canvas id="chartPie" style="width: 100%; height: 100%;"></canvas>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+    var ctxBar = document.getElementById("chartLine").getContext("2d");
+  var rotulosBar = ["Abaixo do Xerife", "Acima do Xerife"];
+  var dataBar = [1711.00, 1539.00, 2585.00, 2499.00, 2498.00];
+  var configBar = {
+    type: 'line',
+    data: {
+      labels: rotulosBar,
+      datasets: [
+        {
+          label: 'MÉDIA SALÁRIO POR REGIÃO',
+          data: dataBar,
+          backgroundColor: [
+            '#FAFF10',
+            '#FFFF00',
+            '#FFAF1F',
+            '#FFFADF',
+            '#9FFFB9',
+            '#9AF100',
+            '#FFCFF0',
+            '#CFFFA2',
+          ],
+          borderColor: [
+            '#FFF0F0',
+            '#FAFD10',
+            '#F616BF',
+            '#08C11F',
+            '#41C0A9',
+            '#789CB0',
+            '#1020F0',
+            '#6AC052',
+          ],
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+  var ctxBar = document.getElementById("chartBar").getContext("2d");
+  var rotulosBar = ["Norte", "Nordeste", "Sudeste", "Sul", "Centro-Oeste"];
+  var dataBar = [1711.00, 1539.00, 2585.00, 2499.00, 2498.00];
+  var configBar = {
+    type: 'line',
+    data: {
+      labels: rotulosBar,
+      datasets: [
+        {
+          label: 'MÉDIA SALÁRIO POR REGIÃO',
+          data: dataBar,
+          backgroundColor: [
+            '#FAFF10',
+            '#FFFF00',
+            '#FFAF1F',
+            '#FFFADF',
+            '#9FFFB9',
+            '#9AF100',
+            '#FFCFF0',
+            '#CFFFA2',
+          ],
+          borderColor: [
+            '#FFF0F0',
+            '#FAFD10',
+            '#F616BF',
+            '#08C11F',
+            '#41C0A9',
+            '#789CB0',
+            '#1020F0',
+            '#6AC052',
+          ],
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+        }
+      }
+    }
+  }
+
+
+
+
+
+    var ctxBar = document.getElementById("chartPie").getContext("2d");
+  var rotulosBar = ["Norte", "Nordeste", "Sudeste", "Sul", "Centro-Oeste"];
+  var dataBar = [1711.00, 1539.00, 2585.00, 2499.00, 2498.00];
+  var configBar = {
+    type: 'line',
+    data: {
+      labels: rotulosBar,
+      datasets: [
+        {
+          label: 'MÉDIA SALÁRIO POR REGIÃO',
+          data: dataBar,
+          backgroundColor: [
+            '#FAFF10',
+            '#FFFF00',
+            '#FFAF1F',
+            '#FFFADF',
+            '#9FFFB9',
+            '#9AF100',
+            '#FFCFF0',
+            '#CFFFA2',
+          ],
+          borderColor: [
+            '#FFF0F0',
+            '#FAFD10',
+            '#F616BF',
+            '#08C11F',
+            '#41C0A9',
+            '#789CB0',
+            '#1020F0',
+            '#6AC052',
+          ],
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+        }
+      }
+    }
+  }
+
+    </script>
