@@ -40,9 +40,9 @@
   
     var ctxBar = document.getElementById("chartLine").getContext("2d");
   var rotulosBar = ["Abaixo do Xerife", "Acima do Xerife"];
-  var dataBar = [1711.00, 1539.00];
+  var dataBar = [86.17, 13.81];
   var configBar = {
-    type: 'line',
+    type: 'pie',
     data: {
       labels: rotulosBar,
       datasets: [
@@ -50,24 +50,11 @@
           label: 'MÉDIA SALÁRIO POR REGIÃO',
           data: dataBar,
           backgroundColor: [
-            '#0A0010',
-            '#000000',
-            '#FFAF1F',
-            '#000AD0',
-            '#9FFFB9',
-            '#0A0100',
-            '#0FC000',
-            '#C0F0A2',
+            '#7ac7f7',
+            '#45f020',
           ],
           borderColor: [
-            '#F000F0',
-            '#0AFD10',
-            '#F616BF',
-            '#08C11F',
-            '#41C0A9',
-            '#789CB0',
-            '#1020F0',
-            '#6AC052',
+            '#FfffF0',
           ],
           borderWidth: 1
         }
@@ -83,11 +70,7 @@
     }
   }
 
-
-
   var ax_chartBar = new Chart(ctxBar, configBar);
-
-
 
   var ctxBar = document.getElementById("chartBar").getContext("2d");
   var rotulosBar = ["Norte", "Nordeste", "Sudeste", "Sul", "Centro-Oeste"];
