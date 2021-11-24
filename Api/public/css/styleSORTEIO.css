@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://theclutch.com.br/wp-content/uploads/2021/03/csgo-capa-cts.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header .menu {
+    position: fixed;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+.header .menu li {
+    display: inline-block;
+}
+.header .menu a {
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: 200ms;
+}
+.header .menu .ativo, .header .menu a:hover {
+    color: #444;
+    background-color: #fff;
+}
+
+.container {
+    margin: auto;
+    margin-top: 8%;
+    background-color: transparent;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.container .conteudo {
+    margin: auto;
+    margin-top: 20px;
+}
+.container .conteudo h2 {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .conteudo .time1 input {
+    width: 25%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.container .conteudo .time2 input {
+    width: 25%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.time1 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.time2 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.container .conteudo button {
+    margin-top: 35px;
+    padding: 15px 50px;
+    margin-left: 32%;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: ease-in-out .25s;
+
+}
+.container .conteudo button:hover {
+    background: rgb(114, 6, 6);
+}
+#resultados {
+    display: flex;
+    flex-direction: row;
+}
+#resultados {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#resultados #resultados2 {
+    margin-right: 450px;
+}
+

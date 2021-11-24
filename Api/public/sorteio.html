@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleSORTEIO.css">
+    <title>Sortei seu Time</title>
+
+</head>
+<body>
+    <div id="header2" class="header">
+        <div class="menu">
+            <a href="#" class="logo"></a>
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="sorteio.html" class="ativo">Sorteio</a></li>
+            <li> <a href="graficos.html">Gráficos</a></li>
+            <li> <a href="login.html">Login</a></li>
+            <li> <a href="cadastro.html">Cadastro</a></li>
+            <li> <a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+        </div>
+
+<div class="container">
+     <div class="conteudo">
+            <h2>Crie seu MIX de forma aleatória!</h2><br>
+            <div class="time1">
+<input id="ipt_jogador1" placeholder="Jogador 1">
+<input id="ipt_jogador2" placeholder="Jogador 2"><br>
+<input id="ipt_jogador3" placeholder="Jogador 3">
+<input id="ipt_jogador4" placeholder="Jogador 4"><br>
+<input id="ipt_jogador5" placeholder="Jogador 5">
+</div>
+<div class="time2">
+<input id="ipt_jogador6" placeholder="Jogador 6"><br>
+<input id="ipt_jogador7" placeholder="Jogador 7">
+<input id="ipt_jogador8" placeholder="Jogador 8"><br>
+<input id="ipt_jogador9" placeholder="Jogador 9">
+<input id="ipt_jogador10" placeholder="Jogador 10"><br>
+</div>
+<button onclick="ver()">Sortear Times</button><br><br>
+<div id="resultados">
+<div id="resultados2"></div>
+<div id="resultados4"></div>
+<div id="resultados3"></div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script>
+    var team1 = [];
+    var team2 = [];
+    var numeros = [];
+    var random = 0;
+    var i = 0;
+    var selecao1 = [];
+    var selecao2 = [];
+    
+    function ver() {
+
+if (ipt_jogador1.value == '' || ipt_jogador2.value == '' || ipt_jogador3.value == '' || ipt_jogador4.value == '' || ipt_jogador5.value == '' || 
+ipt_jogador6.value == '' || ipt_jogador7.value == '' || ipt_jogador8.value == '' || ipt_jogador9.value == '' || ipt_jogador10.value == '' )
+{
+alert ('Não Deixe Os Campos Em Branco!!!');
+        }
+        for (var i = 0; i < 10; i++) {
+            random = Math.floor(Math.random() * 10 + 1);
+
+            if (numeros.includes(random) == false) {
+                numeros.push(random);
+                i++;
+            }
+            
+        } 
+        team1.push(numeros[0]);
+        team1.push(numeros[1]);
+        team1.push(numeros[2]);
+        team1.push(numeros[3]);
+        team1.push(numeros[4]);
+        team2.push(numeros[5]);
+        team2.push(numeros[6]);
+        team2.push(numeros[7]);
+        team2.push(numeros[8]);
+        team2.push(numeros[9]);
+
+        if (team1.includes(1)) {
+            selecao1.push(ipt_jogador1.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador1.value);
+        }
+
+        if (team1.includes(2)) {
+            selecao1.push(ipt_jogador2.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador2.value);
+        }
+
+        if (team1.includes(3)) {
+            selecao1.push(ipt_jogador3.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador3.value);
+        }
+
+        if (team1.includes(4)) {
+            selecao1.push(ipt_jogador4.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador4.value);
+        }
+
+        if (team1.includes(5)) {
+            selecao1.push(ipt_jogador5.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador5.value);
+        }
+
+        if (team1.includes(6)) {
+            selecao1.push(ipt_jogador6.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador6.value);
+        }
+
+        if (team1.includes(7)) {
+            selecao1.push(ipt_jogador7.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador7.value);
+        }
+
+        if (team1.includes(8)) {
+            selecao1.push(ipt_jogador8.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador8.value);
+        }
+
+        if (team1.includes(9)) {
+            selecao1.push(ipt_jogador9.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador9.value);
+        }
+
+        if (team1.includes(10)) {
+            selecao1.push(ipt_jogador10.value);
+        } 
+        else {
+            selecao2.push(ipt_jogador10.value);
+        }
+    resultados2.innerHTML = 
+    `<h3>1° Time</h3><br>
+    ${selecao1[0]}<br>
+    ${selecao1[1]}<br>
+    ${selecao1[2]}<br>
+    ${selecao1[3]}<br>
+    ${selecao1[4]}<br>
+    `;
+
+    resultados3.innerHTML = 
+    `<h3>2° Time</h3><br>
+    ${selecao2[0]}<br>
+    ${selecao2[1]}<br>
+    ${selecao2[2]}<br>
+    ${selecao2[3]}<br>
+    ${selecao2[4]}<br>
+    `;
+    }
+</script>
