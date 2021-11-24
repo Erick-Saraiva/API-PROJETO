@@ -24,17 +24,13 @@
 <body onload="validarSessao(),  obterDadosGrafico(1)">
     <div class="janela">
         <div class="header-left">
-            <h1>AcquaTec</h1>
+            <h1>Evolve</h1>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario"></span>!</h3>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
+
 
             <div class="btn-nav">
 
@@ -81,18 +77,18 @@
 
     // altere aqui como os dados serão exibidos
     // e como são recuperados do BackEnd
-    function obterDadosGrafico(idAquario) {
+    function obterDadosGrafico(id) {
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
-        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas/${id}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
 
-                    plotarGrafico(resposta, idAquario);
+                    plotarGrafico(resposta, id);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -105,7 +101,7 @@
     }
 
     // só altere aqui se souber o que está fazendo!
-    function plotarGrafico(resposta, idAquario) {
+    function plotarGrafico(resposta, id) {
         console.log('iniciando plotagem do gráfico...');
 
         var dados = {
@@ -164,13 +160,13 @@
         });
 
         //Atualiza os dados de 2 em 2 segundos
-        setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+        setTimeout(() => atualizarGrafico(id, dados), 2000);
     }
 
     // só mexer se quiser alterar o tempo de atualização
     // ou se souber o que está fazendo!
-    function atualizarGrafico(idAquario, dados) {
-        fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+    function atualizarGrafico(id, dados) {
+        fetch(`/medidas/tempo-real/${id}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (novoRegistro) {
 
@@ -185,11 +181,11 @@
 
                     window.grafico_linha.update();
 
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 5000);
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(id, dados), 5000);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 5000);
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(id, dados), 5000);
             }
         })
             .catch(function (error) {
