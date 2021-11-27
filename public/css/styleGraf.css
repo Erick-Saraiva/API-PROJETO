@@ -44,20 +44,3 @@ a{
     color: #444;
     background-color: #fff;
 }
-.header .graficos {
-    margin-top: 200px;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.graph {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: transparent;
-    width: 45%;
-    height: 35vh;
-    margin: 10px;
-    padding: 5px;
-}  

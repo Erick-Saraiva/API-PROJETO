@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcquaTec | Página Inicial</title>
-
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/dashboards.css">
+    <title>Evolve | Gráficos</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="./css/dashboards.css"> -->
     <script src="../assets/js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,34 +21,22 @@
 
 </head>
 
-<body onload="validarSessao(),  obterDadosGrafico()">
+<body onload="obterDadosGrafico()">
+    <div class="header">
+    <div class="menu">
+        <a href="#" class="logo"></a>
+    <ul>
+        <li> <a href="indexLogado.html">Home</a></li>
+        <li> <a href="sorteio.html">Sorteio</a></li>
+        <li> <a href="graficos.html" class="ativo">Gráficos</a></li>
+        <li> <a href="simuladorLogado.html">Cursos</a></li>
+        <li> <a href="sobreLogado.html">Sobre Nós</a></li>
+        <li> <a href="index.html">Sair</a></li>
+    </ul>
+    </div>
+</div>
     <div class="janela">
-        <div class="header-left">
-            <h1>Evolve</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario"></span>!</h3>
-            </div>
-
-
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
-
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
-        </div>
+        
 
         <div class="dash">
             <div class="btns-dash">
@@ -106,8 +94,8 @@
                 {
                     yAxisID: 'y-nivel',
                     label: 'Cadastrados',
-                    borderColor: '#32B9CD',
-                    backgroundColor: '#32b9cd8f',
+                    borderColor: '#000',
+                    backgroundColor: '#07dafa8f',
                     fill: true,
                     data: []
                 }
@@ -141,7 +129,7 @@
                 stacked: false,
                 title: {
                     display: true,
-                    text: 'Histórico recente de cadastros'
+                    text: 'Níveis dos cadastrados'
                 },
                 scales: {
                     yAxes: [{
