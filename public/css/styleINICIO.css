@@ -3,12 +3,15 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-.header {
-    width: 100%;
-    height: 100%;
+body {
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://www.pensacolavoice.com/wp-content/uploads/2020/08/CSGO.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+}
+.header {
+    width: 100%;
+    height: 100vh;
 }
 
 a{
@@ -126,4 +129,29 @@ a{
 .social .box h4 {
     color: #fff;
     margin-top: 30px;
+}
+#btn_clique{
+    padding: 15px 50px;
+    margin: 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: ease-in-out .25s;
+    margin-left: 450px;
+    margin-top: 220px;
+}
+.header #btn_clique:hover {
+    background: rgb(0, 110, 255);
+}
+.header #resultados {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 190px;
+}
+.header #resultados img {
+    width: 180px;
+    height: 180px;
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolve | Início</title>
+    <link rel="stylesheet" href="./css/styleINICIO.css">
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <a href="#" class="logo"></a>
+            <ul>
+                <li> <a href="indexLogado.html">Home</a></li>
+                <li> <a href="sorteio.html" class="ativo">Sorteio</a></li>
+                <li> <a href="graficos.html">Gráficos</a></li>
+                <li> <a href="simuladorLogado.html">Cursos</a></li>
+                <li> <a href="sobreLogado.html">Sobre Nós</a></li>
+                <li> <a href="index.html">Sair</a></li>
+            </ul>
+        </div>  
+        <button id="btn_clique" onclick="campeao()">Quem vai ser o campeão do próximo MAJOR?</button>
+        <div id="resultados"></div>
+    </div>
+
+    
+</body>
+</html>
+<script>
+    var random = 0;
+    function campeao() {
+        var random = ((Math.random() * 10)).toFixed(0);
+
+    if (random == 0) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/8340.png">
+        `;
+    }
+    else if (random == 1) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://pbs.twimg.com/profile_images/1392380301494599681/9TTIjhbF_400x400.png">
+        `;
+    }
+    else if (random == 2) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://img-cdn.hltv.org/teamlogo/_x9xMubeeb-fqq_21BJ6Fd.png?ixlib=java-2.1.0&w=200&s=23e3181669505f2aa6a5ae4f1a943757">
+        `;
+    }
+    else if (random == 3) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://pbs.twimg.com/profile_images/1445443686314045441/4F9w3LC1_400x400.jpg">
+        `;
+    }
+    else if (random == 4) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://theradioativo.com.br/wp-content/uploads/2020/07/furia-esports-250x250-1.png">
+        `;
+    }
+    else if (random == 5) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://api-v3.draft5.gg/teams/773/logo">
+        `;
+    }
+    else if (random == 6) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://cdn.escharts.com/uploads/public/5d9/30c/2a2/5d930c2a2aa89205287016.png">
+        `;
+    }
+    else if (random == 7) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://img-cdn.hltv.org/teamlogo/o9gWbZqKaYgDJL5ttGKuqQ.png?ixlib=java-2.1.0&w=200&s=2ee20cb2afd7d4050d85a85151c2a523">
+        `;
+    }
+    else if (random == 8) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://img-cdn.hltv.org/teamlogo/yZ6Bpuui1rW3jocXQ68XgZ.svg?ixlib=java-2.1.0&s=f39be1d3e7baf30a4e7f0b1216720875">
+        `;
+    }
+    else if (random == 9) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://img-cdn.hltv.org/teamlogo/mbY2YeFKUAbL9NyO6ab7-c.png?ixlib=java-2.1.0&w=200&s=1c4343c7ff32e9e75f9321b91d443d07">
+        `;
+    }
+    else if (random == 10) {
+        resultados.innerHTML = `O Próximo time campeão do Major será: <br><br> 
+        <img src="https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa">
+        `;
+    }
+
+}
+</script>
